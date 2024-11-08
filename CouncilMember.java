@@ -1,8 +1,21 @@
-import java.io.*;
-import java.net.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.*;
 
+@SuppressWarnings("WrongPackageStatement")
 public class CouncilMember implements Runnable {
+    public enum ResponseProfile {
+        IMMEDIATE,
+        DELAY_SMALL,
+        DELAY_LARGE,
+        SLOW,
+        OFFLINE
+    }
+    protected ResponseProfile responseProfile = ResponseProfile.DELAY_SMALL;
+
     protected int id;
     protected int port;
     protected ServerSocket serverSocket;
@@ -80,17 +93,64 @@ public class CouncilMember implements Runnable {
         }
     }
 
+    public void setResponseProfile(ResponseProfile responseProfile) {
+        this.responseProfile = responseProfile;
+    }
+
     protected void handleMessage(Message msg) {
         // This is the default method to handle messages, we can override this in subclasses for specific behavior
 
-        // Wait a small random time to simulate the delay in member response
-        try {
-            Thread.sleep((long) (Math.random() * 500));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        switch (responseProfile) {
+            case IMMEDIATE:
+                // Immediate response without delay
+                processMessage(msg);
+                break;
+            case DELAY_SMALL:
+                // Wait a small random time to simulate the delay in member response
+                try {
+                    Thread.sleep((long) (Math.random() * 500));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                processMessage(msg);
+                break;
+            case DELAY_LARGE:
+                // Wait a large random time to simulate the delay in member response
+                try {
+                    Thread.sleep((long) (Math.random() * 2000));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                processMessage(msg);
+                break;
+            case SLOW:
+                // Randomly drop message
+                if (Math.random() < 0.5) {
+                    return;
+                } else {
+                    // Simulate large delay
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                processMessage(msg);
+                break;
+            case OFFLINE:
+                // No response
+                break;
+            default:
+                // Default behavior is to wait a small random time
+                // Wait a small random time to simulate the delay in member response
+                try {
+                    Thread.sleep((long) (Math.random() * 500));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                processMessage(msg);
+                break;
         }
-        
-        processMessage(msg);
     }
 
     protected void processMessage(Message msg) {
@@ -214,6 +274,14 @@ public class CouncilMember implements Runnable {
                 );
                 broadcastMessage(learnMsg);
                 learnedValueSent = true;
+
+                // stop the member since consensus is reached
+                isRunning = false;
+                try {
+                    serverSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

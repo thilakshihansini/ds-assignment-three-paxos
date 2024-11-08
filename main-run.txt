@@ -1,0 +1,49 @@
+<Member 1 received message: Message{type=PREPARE, senderId=8, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 1 received message: Message{type=PREPARE, senderId=9, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 6 received message: Message{type=PREPARE, senderId=8, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 4 received message: Message{type=PREPARE, senderId=8, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 5 received message: Message{type=PREPARE, senderId=9, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 5 received message: Message{type=PREPARE, senderId=8, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 7 received message: Message{type=PREPARE, senderId=9, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 6 received message: Message{type=PREPARE, senderId=9, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PROMISE, senderId=6, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 7 received message: Message{type=PREPARE, senderId=8, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 received message: Message{type=PREPARE, senderId=9, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PREPARE, senderId=8, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 received message: Message{type=PROMISE, senderId=1, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 received message: Message{type=PROMISE, senderId=4, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PROMISE, senderId=5, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 4 received message: Message{type=PREPARE, senderId=9, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PROMISE, senderId=1, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PROMISE, senderId=7, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PROMISE, senderId=4, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 1 received message: Message{type=ACCEPT_REQUEST, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 received message: Message{type=PROMISE, senderId=9, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 received message: Message{type=PROMISE, senderId=6, proposalNumber=108, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 4 received message: Message{type=ACCEPT_REQUEST, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 7 received message: Message{type=ACCEPT_REQUEST, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 6 received message: Message{type=ACCEPT_REQUEST, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=PROMISE, senderId=8, proposalNumber=109, value='null', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=ACCEPTED, senderId=1, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=ACCEPTED, senderId=4, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=ACCEPTED, senderId=7, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 5 received message: Message{type=ACCEPT_REQUEST, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 received message: Message{type=ACCEPT_REQUEST, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=ACCEPTED, senderId=6, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 received message: Message{type=ACCEPTED, senderId=8, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 9 learned value: Candidate_B
+Member 1 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 1 learned value: Candidate_B
+Member 9 received message: Message{type=ACCEPTED, senderId=5, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 5 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 5 learned value: Candidate_B
+Member 7 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 7 learned value: Candidate_B
+Member 8 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 8 learned value: Candidate_B
+Member 4 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 4 learned value: Candidate_B
+Member 6 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 6 learned value: Candidate_B
+Member 2 received message: Message{type=LEARN, senderId=9, proposalNumber=109, value='Candidate_B', acceptedProposalNumber=-1, acceptedValue='null'}
+Member 2 learned value: Candidate_B
