@@ -10,14 +10,13 @@ public class Main {
         }
 
         CouncilMember[] members = new CouncilMember[9];
-        members[0] = new M1(1, 5001, memberPorts);
-        members[1] = new M2(2, 5002, memberPorts, true); // M2 is online
-        members[2] = new M3(3, 5003, memberPorts, false);  // M3 is disconnected
         
-        // Members 4-9 are regular council members
-        for (int i = 3; i < 9; i++) {
+        for (int i = 0; i < 9; i++) {
             members[i] = new CouncilMember(i + 1, 5000 + i + 1, memberPorts);
         }
+        members[0].responseProfile = CouncilMember.ResponseProfile.IMMEDIATE;
+        members[1].responseProfile = CouncilMember.ResponseProfile.SLOW;
+        members[2].responseProfile = CouncilMember.ResponseProfile.OFFLINE;
 
         // Start all member threads
         for (CouncilMember member : members) {
@@ -28,11 +27,11 @@ public class Main {
         Thread.sleep(1000);
 
         // Initiate proposals
-        members[0].propose("Candidate_A");
-        members[1].propose("Candidate_B");
+        members[7].propose("Candidate_A");
+        members[8].propose("Candidate_B");
 
         // Wait for consensus
-        Thread.sleep(20000);
+        Thread.sleep(6000);
 
         // Stop all member threads
         for (CouncilMember member : members) {
